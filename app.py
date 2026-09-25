@@ -258,7 +258,7 @@ st.markdown(
 | **Vier Nachbarn** | Die Nachbarschaft ist fest; größere Nachbarschaften machen das Hilfsnetz dichter, ändern aber das Prinzip nicht. |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: die zwölf Stücke der Hauptlinie (gebaut), dazu die Erweiterung E1: **Projektauswahl** (gebaut) und **Graph Cuts** (dieses Stück); optional folgt der Gomory-Hu-Baum.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: die zwölf Stücke der Hauptlinie (gebaut), dazu die Erweiterung E1: **Projektauswahl** (gebaut) und **Graph Cuts** (dieses Stück) und **Gomory-Hu-Baum** (gebaut: gomory-hu-demo).")
 
 st.markdown("---")
 

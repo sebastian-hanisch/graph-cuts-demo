@@ -8,7 +8,7 @@ Ein Liefergebiet ist in Zellen geteilt, in jeder Zelle wird eine Kennzahl gemess
 Für zwei Labels ist die beste Beschriftung ein minimaler Schnitt: Quelle und Senke sind die Zonen, jede Zelle hängt mit ihrem Datenpreis an ihnen, Nachbarn hängen mit λ aneinander. Zum Lösen kommt **Boykov–Kolmogorov** (2004) dazu, das Praxisverfahren für Gitter: zwei dauerhafte Suchbäume, die nach jedem Weg repariert statt neu gebaut werden. Vehikel: ein Raster mit bekannten wahren Zonen (Rechteck, L-Form, Scheibe, Streifen, Inseln) – so lässt sich jede Rekonstruktion **an der Wahrheit messen**.
 Die Brücke zwischen Optimierung und Machine Learning: die Energie ist ein Markov Random Field, der Schnitt ihr exakter Löser (nur für zwei Labels).
 
-**Einordnung in die Reihe (die Kanten des Graphen):** In [projektauswahl-demo](https://github.com/sebastian-hanisch/projektauswahl-demo) war die Nachbarstrafe **unendlich** (eine Voraussetzung: wer die Filiale wählt, muss das DC wählen); hier ist sie **endlich**, und der Schnitt wägt ab. Dinic und Edmonds-Karp (Kopien aus den Vorgängern) sind Vergleichsbasis für das neue Verfahren Boykov–Kolmogorov. Mehrklassen-Beschriftung (α-Expansion), nicht submodulare Energien (QPBO) und Bildbeispiele sind bewusst nicht Teil; optional folgt als drittes Stück der Erweiterung E1 der Gomory-Hu-Baum. Bisher gebaut: die zwölf Stücke der Hauptlinie und die beiden ersten der Erweiterung E1.
+**Einordnung in die Reihe (die Kanten des Graphen):** In [projektauswahl-demo](https://github.com/sebastian-hanisch/projektauswahl-demo) war die Nachbarstrafe **unendlich** (eine Voraussetzung: wer die Filiale wählt, muss das DC wählen); hier ist sie **endlich**, und der Schnitt wägt ab. Dinic und Edmonds-Karp (Kopien aus den Vorgängern) sind Vergleichsbasis für das neue Verfahren Boykov–Kolmogorov. Mehrklassen-Beschriftung (α-Expansion), nicht submodulare Energien (QPBO) und Bildbeispiele sind bewusst nicht Teil; als drittes Stück der Erweiterung E1 folgte der Gomory-Hu-Baum (gebaut: [gomory-hu-demo](https://github.com/sebastian-hanisch/gomory-hu-demo)). Bisher gebaut: die zwölf Stücke der Hauptlinie und alle drei der Erweiterung E1.
 ```
 edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)                  [gebaut]
   ├─ dinic-demo (viele kürzeste Wege je Phase: Niveaugraph, blockierender Fluss)        [gebaut]
@@ -19,7 +19,7 @@ edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)          
 
 Erweiterung E1: der Schnitt als Modell (Kind von edmonds-karp-demo und dinic-demo)
   └─ projektauswahl-demo (Voraussetzung = unendliche Nachbarstrafe)                     [gebaut]
-       └─ graph-cuts-demo (endliche Nachbarstrafe, Boykov-Kolmogorov)                   [dieses Stück]
+       └─ graph-cuts-demo (endliche Nachbarstrafe, Boykov-Kolmogorov)                   [gebaut]
 ```
 
 ## Ergebnis (Zahlen aus den Tests)
@@ -80,7 +80,7 @@ Vor dem Bau standen fünf Vermutungen im Plan. Gemessen:
 
 - Mehrklassen-Beschriftung ($\alpha$-Expansion), nicht submodulare Energien (QPBO), Tiefen- und Bildbeispiele.
 - Schätzung von λ, μ und σ (etwa EM oder Kreuzvalidierung).
-- Gomory-Hu-Baum (optionales drittes Stück der Erweiterung E1).
+- Gomory-Hu-Baum (drittes Stück der Erweiterung E1, gebaut: [gomory-hu-demo](https://github.com/sebastian-hanisch/gomory-hu-demo)).
 
 ## Dateien
 
