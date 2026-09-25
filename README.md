@@ -1,6 +1,6 @@
 # Graph Cuts – glatte Zonen aus verrauschten Messwerten – Streamlit-Demo
 
-*(noch nicht deployed)*
+**[→ Demo live ausprobieren](https://sebastianhanisch-graph-cuts-demo.streamlit.app/)**
 
 Zweite Erweiterung (Stück 14) der **Netzwerkfluss-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Fortsetzung von [projektauswahl-demo](https://github.com/sebastian-hanisch/projektauswahl-demo):
 anders als die Fall-Demos im Portfolio (ein Anwendungsfall, mehrere Verfahren im Vergleich) zeigt diese Demo **ein** Verfahren – den **minimalen Schnitt als Modell einer binären Beschriftung mit Glattheitsstrafe** (Greig/Porteous/Seheult 1989; Boykov/Jolly 2001) – an einem wachsenden Beispiel.
