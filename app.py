@@ -134,7 +134,7 @@ maps = [("threshold", row2[0]), ("mean", row2[1]), ("icm", row3[0]), ("cut", row
 for key, col in maps:
     col.markdown(f"**{ev.METHOD_LABELS[key]}** – {errs[key]} von {g.n} falsch")
     col.plotly_chart(build_labels(labels[key], w, h, truth=g.truth), width="stretch", key=f"map_{key}")
-st.caption("Hell = Zone 0, dunkel = Zone 1; rot überlegte Zellen sind gegen die Wahrheit falsch beschriftet. "
+st.caption("Hell = Zone 0, dunkel = Zone 1; rot überlagerte Zellen sind gegen die Wahrheit falsch beschriftet. "
            "Die Schwelle beurteilt jede Zelle allein; der Mittelwertfilter mittelt über 3 × 3 Zellen; ICM (Iterated Conditional Modes) verbessert von der Schwelle aus Zelle für Zelle die Energie; der Graph Cut findet die minimale Energie.")
 
 m1, m2, m3, m4 = st.columns(4)
@@ -289,6 +289,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Netzwerkfluss: vom Max-Flow zum Netzdesign](https://sebastianhanisch.net/konzepte-netzwerkfluss.html)."
 )
